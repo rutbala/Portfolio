@@ -1,0 +1,806 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* This is crucial: disables all scrolling */
+  background: #111;
+  color: #FFD700;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+  color: #FFD700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #fffbe6;
+}
+
+.gold-text {
+  color: #FFD700;
+}
+
+/* Main Container for Horizontal Scrolling */
+.main-container {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy transition */
+}
+
+/* Individual Page Styles */
+.page {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
+  flex-direction: column; /* Stack content vertically */
+  padding: 140px 40px 80px 40px; /* Adjusted padding */
+  overflow-y: auto; /* This is the key: allows vertical scrolling WITHIN a page */
+}
+
+.page-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Fixed Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111111cc;
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+  border-bottom: 2px solid #FFD70022;
+  z-index: 100;
+  text-align: center;
+}
+
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+.nav {
+  margin-top: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.nav-link:hover, .nav-link.active {
+  background: #FFD700;
+  color: #111;
+}
+
+/* Section Specific Styles */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px #FFD70022;
+  text-align: center;
+}
+
+/* --- UPDATED ABOUT SECTION STYLES --- */
+.about-content {
+    background: #1A1A1A;
+    border: 1px solid #FFD70022;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* This vertically centers the photo and text for a balanced look */
+    gap: 50px;
+    transition: all 0.3s ease;
+}
+.about-content:hover {
+    border-color: #FFD70044;
+}
+
+.profile-pic-container {
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
+    border: 5px solid #FFD700;
+    box-shadow: 0 8px 32px #FFD70033;
+    overflow: hidden;
+    flex-shrink: 0;
+    /* margin-top: 15px; is no longer needed */
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.25);
+    transform-origin: 50% 25%;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #f0f0f0; /* This keeps the white text color */
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.about-text p:last-child { margin-bottom: 0; }
+
+.social-links { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; }
+/* --- END OF REVERTED STYLES --- */
+
+.social-link { display: flex; align-items: center; gap: 0.8rem; padding: 0.8rem 1.2rem; background: #181818; border: 1.5px solid #FFD700; border-radius: 8px; color: #FFD700; font-weight: 500; transition: all 0.2s ease; width: fit-content; }
+
+.social-link:hover {
+    background: #FFD700;
+    color: #181818;
+    transform: translateX(5px);
+}
+
+.social-link i {
+    font-size: 1.3rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* New Education Section Styles */
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.education-card {
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    transform: perspective(1000px);
+}
+
+.education-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.education-icon {
+    font-size: 3rem;
+    color: #FFD700;
+    flex-shrink: 0;
+}
+
+.education-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.education-content .university {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 4px;
+}
+
+.education-content .date {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 12px;
+}
+
+.education-content .details {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+/* New Employment Tab Layout Styles */
+.employment-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    min-height: 450px; /* Gives the section a consistent height */
+}
+
+.employment-tabs {
+    flex: 0 0 300px; /* Fixed width for the tab list */
+    display: flex;
+    flex-direction: column;
+}
+
+.employment-tab {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: transparent;
+    border: none;
+    border-left: 3px solid #FFD70022;
+    padding: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.employment-tab:hover {
+    background-color: #FFD70011;
+    border-left-color: #FFD70088;
+}
+
+.employment-tab.active {
+    background-color: #FFD7001A;
+    border-left-color: #FFD700;
+    color: #fff;
+}
+
+.employment-tab i {
+    font-size: 1.8rem;
+    color: #FFD700;
+}
+
+.tab-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-text .company {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-text .role-preview {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.employment-content {
+    flex-grow: 1;
+    position: relative;
+}
+
+.content-panel {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    background: #1A1A1A;
+    border: 1px solid #FFD70022;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.content-panel.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.content-panel h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.content-panel .date {
+    font-weight: 600;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.content-panel ul {
+    padding-left: 20px;
+}
+
+.content-panel ul li {
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* New Tech Stack Card Grid Styles */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px; /* Slightly reduced gap for better fit */
+    max-width: 1200px; /* Slightly increased max-width */
+    margin: 40px auto 0;
+}
+
+.tech-card {
+    background: #1A1A1A;
+    border: 1px solid #FFD70022;
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px #00000055;
+    border-color: #FFD70066;
+}
+
+.tech-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFD70022;
+    padding-bottom: 15px;
+}
+
+.tech-card-icon {
+    font-size: 2.2rem;
+    color: #FFD700;
+    width: 40px; /* Ensures consistent alignment */
+    text-align: center;
+}
+
+.tech-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.tech-skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tech-skills-list li {
+    font-size: 1.05rem;
+    color: #cccccc;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 25px;
+}
+
+.tech-skills-list li::before {
+    content: '›'; /* Using a more elegant chevron bullet */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.tech-skills-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* New Certifications & Publications Section Styles */
+.cert-pub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.info-card {
+    background: #1A1A1A;
+    border: 1px solid #FFD70022;
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px #00000055;
+    border-color: #FFD70066;
+}
+
+.info-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #FFD70022;
+    padding-bottom: 20px;
+}
+
+.info-card-header i {
+    font-size: 2.2rem;
+    color: #FFD700;
+}
+
+.info-card-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.info-list li:last-child {
+    margin-bottom: 0;
+}
+
+.info-list li > i {
+    font-size: 1.8rem;
+    color: #FFD700;
+    margin-top: 5px; /* Aligns icon with text better */
+}
+
+.info-text h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 4px;
+}
+
+.info-text p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #1A1A1A;
+    border: 1px solid #FFD70022;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px #00000055;
+    border-color: #FFD70066;
+}
+
+.project-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.project-description {
+    color: #ccc;
+    margin-bottom: 25px; /* Increased margin to give more space before the link */
+    line-height: 1.6;
+    text-align: justify;
+    flex-grow: 1;
+}
+
+.project-link {
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 1.5px solid #FFD700;
+    padding-bottom: 3px;
+    align-self: flex-start;
+}
+
+/* New Resume Section Styles */
+.resume-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: #1a1a1a;
+    border: 1px solid #FFD70022;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    align-items: center;
+}
+
+.resume-highlights {
+    flex: 1;
+    min-width: 300px;
+    border-right: 1px solid #FFD70022;
+    padding-right: 40px;
+}
+
+.resume-download-zone {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.resume-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.resume-highlights ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resume-highlights ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.15rem;
+    color: #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.resume-highlights ul li:last-child {
+    margin-bottom: 0;
+}
+
+.resume-highlights ul li i {
+    color: #FFD700;
+    font-size: 1.5rem;
+    width: 25px;
+}
+
+.download-icon {
+    font-size: 4rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.resume-download-zone p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.resume-download-zone .btn {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+}
+
+/* New Contact Section Styles */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    background: #1A1A1A;
+    border: 1px solid #FFD70022;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+.contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.contact-info p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.social-links-contact .social-link {
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex: 1.5;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #FFD700;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    border: 1px solid #FFD70055;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 10px #FFD70033;
+}
+
+.form-submit-btn {
+    align-self: flex-start;
+    padding: 12px 30px;
+}
+
+/* Fixed Footer and Nav Arrows */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  background: #111111cc;
+  z-index: 50;
+}
+
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #FFD70022;
+  color: #FFD700;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 101;
+  transition: background 0.3s;
+}
+
+.nav-arrow:hover {
+  background: #FFD70044;
+}
+
+.prev-arrow {
+  left: 20px;
+}
+
+.next-arrow {
+  right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-pic-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .social-links {
+    align-items: center;
+  }
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .prev-arrow {
+    left: 10px;
+  }
+  .next-arrow {
+    right: 10px;
+  }
+  .page {
+    padding: 100px 20px 60px 20px;
+  }
+  .header {
+    padding: 15px 0;
+  }
+  .site-title {
+    font-size: 1.5rem;
+  }
+  .nav-list {
+    gap: 0.5rem;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 850px) {
+    .resume-container {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .resume-highlights {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid #FFD70022;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+} 
