@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Nunito+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="site-title">Ruth Balaji</h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active" data-slide="0">About</a></li>
+                    <li><a href="#" class="nav-link" data-slide="1">Education</a></li>
+                    <li><a href="#" class="nav-link" data-slide="2">Employment</a></li>
+                    <li><a href="#" class="nav-link" data-slide="3">Tech Stack</a></li>
+                    <li><a href="#" class="nav-link" data-slide="4">Projects</a></li>
+                    <li><a href="#" class="nav-link" data-slide="5">Resume</a></li>
+                    <li><a href="#" class="nav-link" data-slide="6">Certs & Papers</a></li>
+                    <li><a href="#" class="nav-link" data-slide="7">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main container for all the slidable pages -->
+    <main class="main-container">
+
+        <!-- Page 1: About Section -->
+        <section class="page" id="about">
+            <div class="page-content">
+                <h2 class="section-title gold-text">About Me</h2>
+                <div class="about-content">
+                    <div class="profile-pic-container">
+                        <img src="https://drive.google.com/uc?export=view&id=1LoSd0I8AaB7-PjhbR1mUi4rUaPVQtU2d" alt="Ruth Balaji" class="profile-pic">
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I'm an AI Engineer with a passion for designing intelligent, scalable systems that make a real impact. With a background in software development and data engineering, I specialize in building cloud-native AI solutions—integrating machine learning, real-time analytics, and robust data pipelines on platforms like AWS. Along the way, I've built intelligent dashboards, deployed end-to-end ML models, and integrated Generative AI into production workflows.</p>
+                        <p>Beyond the code, I love to play basketball and dance whenever I get the chance, it keeps me balanced and inspired.</p> 
+                        <p>I'm passionate about turning bold ideas into smart, scalable systems and always exploring what's next in the AI space. If you're working on something exciting or looking to collaborate on AI-driven innovation, let's connect!</p>
+                        <div class="social-links">
+                             <a href="https://www.linkedin.com/in/ruth-balaji/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                             <a href="https://github.com/rutbala" target="_blank" class="social-link"><i class="fab fa-github"></i><span>GitHub</span></a>
+                             <a href="mailto:rutbala1@gmail.com" class="social-link"><i class="fas fa-envelope"></i><span>rutbala1@gmail.com</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 2: Education Section -->
+        <section class="page" id="education">
+            <div class="page-content">
+                <h2 class="section-title gold-text">Education</h2>
+                <div class="education-grid">
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>Masters of Science in Intelligent Systems Engineering</h3>
+                            <p class="university">Indiana University Bloomington, IN </p>
+                            <p class="date">August 2023 – May 2025</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="education-content">
+                            <h3>B.E. Electronics and Communication Engineering</h3>
+                            <p class="university">Sathyabama University, India</p>
+                            <p class="date">June 2019 – May 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 3: Employment Section -->
+        <section class="page" id="employment">
+            <div class="page-content">
+                 <h2 class="section-title gold-text">Employment History</h2>
+                 <div class="employment-container">
+                    <!-- Left side: Vertical Tabs -->
+                    <div class="employment-tabs">
+                        <button class="employment-tab active" data-target="job-1">
+                            <i class="fas fa-university"></i>
+                            <div class="tab-text">
+                                <span class="company">Indiana University</span>
+                                <span class="role-preview">Data Analyst</span>
+                            </div>
+                        </button>
+                        <button class="employment-tab" data-target="job-2">
+                            <i class="fas fa-hospital-user"></i>
+                             <div class="tab-text">
+                                <span class="company">Annai Hospital</span>
+                                <span class="role-preview">Data Analyst Intern</span>
+                            </div>
+                        </button>
+                        <button class="employment-tab" data-target="job-3">
+                           <i class="fas fa-cogs"></i>
+                             <div class="tab-text">
+                                <span class="company">Appasamy Ocular Devices</span>
+                                <span class="role-preview">Data Analyst Intern</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <!-- Right side: Content Panels -->
+                    <div class="employment-content">
+                        <!-- Job 1 Details -->
+                        <div class="content-panel active" id="job-1">
+                            <h3>Data Analyst <span class="gold-text">@ Indiana University Bloomington</span></h3>
+                            <p class="date">May 2024 - May 2025</p>
+                            <ul>
+                                <li>Designed and automated 30+ data pipelines using Python, SQL, and ETL tools to streamline data flow across departments by ensuring reliable data delivery for university-wide operations.</li>
+                                <li>Performed analysis of email marketing metrics (open, conversion & unsubscribe rates) using statistical techniques (regression analysis, hypothesis testing) and BI tools (PowerBI, Excel), leading to a 5% increase in student engagement.</li>
+                                <li>Managed the data life-cycle for 30+ business units by ensuring data integrity and availability to support decision-making.</li>
+                            </ul>
+                        </div>
+                        <!-- Job 2 Details -->
+                        <div class="content-panel" id="job-2">
+                            <h3>Data Analyst Intern <span class="gold-text">@ Annai Hospital</span></h3>
+                            <p class="date">June 2022 - December 2022</p>
+                            <ul>
+                                <li>Analyzed revenue and patient acquisition trends, and developed forecasting models using Python to optimize service pricing and marketing strategies that resulted in a 12% increase in outpatient visits.</li>
+                                <li>Developed and automated interactive dashboards to monitor key business KPIs (patient flow, revenue per department, cost centers) and reduced reporting time by 40% for leadership decisions.</li>
+                                <li>Collaborated with the operations team to identify inefficiencies in appointment scheduling and resource allocation, which resulted in $15K annual savings by reducing administrative overhead.</li>
+                            </ul>
+                        </div>
+                        <!-- Job 3 Details -->
+                        <div class="content-panel" id="job-3">
+                           <h3>Data Analyst Intern <span class="gold-text">@ Appasamy Ocular Devices</span></h3>
+                            <p class="date">June 2021 - December 2021</p>
+                            <ul>
+                                <li>Conducted analysis of the sales data to identify key sales Key performance indicators (KPIs) and implemented Objectives and Key Results (OKRs) that boosted the sales team efficiency by 40%.</li>
+                                <li>Built predictive models using PyTorch to forecast sales trends and reduced customer acquisition costs by $30 per customer.</li>
+                                <li>Refined sales campaigns using A/B testing and boosted customer lifecycle efficiency by 25% with regulatory compliance.</li>
+                                <li>Designed 10+ Tableau dashboards using DAX to monitor the real-time sales pipeline and boost performance by 35%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Page 4: Tech Stack Section -->
+        <section class="page" id="tech-stack">
+            <div class="page-content">
+                <h2 class="section-title gold-text">Technical Skills</h2>
+                <div class="tech-grid">
+                    <!-- Card 1: Programming Languages -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <i class="fas fa-code tech-card-icon"></i>
+                            <h3 class="tech-card-title">Programming Languages</h3>
+                        </div>
+                        <ul class="tech-skills-list">
+                            <li>Python (Matplotlib, NumPy, Pandas, Scikit-learn, Seaborn)</li>
+                            <li>R</li>
+                            <li>SQL</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+                    <!-- Card 2: Databases -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <i class="fas fa-database tech-card-icon"></i>
+                            <h3 class="tech-card-title">Databases</h3>
+                        </div>
+                        <ul class="tech-skills-list">
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                     <!-- Card 3: Frameworks -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <i class="fas fa-layer-group tech-card-icon"></i>
+                            <h3 class="tech-card-title">Frameworks</h3>
+                        </div>
+                        <ul class="tech-skills-list">
+                            <li>Flask</li>
+                            <li>React</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </div>
+                    <!-- Card 4: Visualization & ETL -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <i class="fas fa-chart-bar tech-card-icon"></i>
+                            <h3 class="tech-card-title">Visualization & ETL</h3>
+                        </div>
+                        <ul class="tech-skills-list">
+                            <li>Excel (Pivot Tables, VBA)</li>
+                            <li>Power BI</li>
+                            <li>Looker</li>
+                            <li>Tableau</li>
+                            <li>Alteryx</li>
+                        </ul>
+                    </div>
+                    <!-- Card 5: AI & Analytics -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <i class="fas fa-robot tech-card-icon"></i>
+                            <h3 class="tech-card-title">AI & Analytics</h3>
+                        </div>
+                        <ul class="tech-skills-list">
+                            <li>Machine Learning</li>
+                            <li>Generative AI (LLMs)</li>
+                            <li>Natural Language Processing (NLP)</li>
+                            <li>Statistical Modeling</li>
+                            <li>A/B Testing</li>
+                            <li>Data Storytelling</li>
+                        </ul>
+                    </div>
+                    <!-- Card 6: Cloud & Tools -->
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <i class="fas fa-cloud tech-card-icon"></i>
+                            <h3 class="tech-card-title">Cloud & Tools</h3>
+                        </div>
+                        <ul class="tech-skills-list">
+                            <li>AWS (S3, EC2, Glue, Redshift, QuickSight)</li>
+                            <li>BigQuery</li>
+                            <li>Snowflake</li>
+                            <li>DBT</li>
+                            <li>JIRA</li>
+                            <li>Docker</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 5: Projects Section -->
+        <section class="page" id="projects">
+            <div class="page-content">
+                <h2 class="section-title gold-text">My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Automated Diet Management System</h3>
+                            <p class="project-description">An AI-driven solution using CNNs to identify food items from images and estimate caloric content, helping users track dietary intake accurately.</p>
+                            <a href="https://github.com/rutbala/AUTOMATED-FOOD-IDENTIFICATION-AND-CALORIE-CALCULATION-USING-DEEP-LEARNING" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Automated ICD-9 Code Prediction</h3>
+                            <p class="project-description">A deep learning project to predict medical billing codes from clinical notes using models like Clinical BERT and LSTM on the MIMIC-III dataset.</p>
+                            <a href="https://github.com/rutbala/Automated-ICD-9-Code-Prediction-from-Clinical-Notes-in-MIMIC-III-Using-Deep-Learning" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Brain Tumor Segmentation (CNN)</h3>
+                            <p class="project-description">This project uses convolutional neural networks (CNNs) to automatically segment brain tumors from MRI images, improving diagnostic accuracy.</p>
+                            <a href="https://github.com/rutbala/BRAIN-TUMOR-SEGMENTATION-USING-CONVOLUTIONAL-NEURAL-NETWORKS-IN-MRI-IMAGES" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Brain Wave Controlled Robot</h3>
+                            <p class="project-description">A Brain-Computer Interface (BCI) that uses NeuroSky biosensors to process EEG signals, allowing individuals with paralysis to control a wheelchair and home appliances.</p>
+                            <a href="https://github.com/rutbala/BRAIN-WAVE-CONTROLLED-ROBOT" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                     <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">CRM Marketing Insights</h3>
+                            <p class="project-description">This project analyzes CRM data to identify factors in campaign success using Python for data cleaning, EDA, and classification modeling.</p>
+                            <a href="https://github.com/rutbala/CRM-Marketing-Insights" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">City of Manhattan, KS Housing Dashboard</h3>
+                            <p class="project-description">An interactive dashboard providing insights into housing trends, affordability, and availability to aid local decision-makers in crafting housing policies.</p>
+                            <a href="https://github.com/rutbala/City-of-Manhattan-KS-Housing-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                     <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Credit Card Fraud Detection</h3>
+                            <p class="project-description">Focuses on building a predictive model to accurately identify fraudulent credit card transactions while addressing class imbalance with SMOTE/ADASYN.</p>
+                            <a href="https://github.com/harshitgupta1998/Credit-Card-Fraud-Detection-Using-SMOTE-ADASYN" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 8 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Distracted Driver Detection</h3>
+                            <p class="project-description">A computer vision model using CNNs to enhance road safety by detecting and classifying distracted driving behaviors from dashboard camera images.</p>
+                             <a href="https://github.com/rutbala/DISTRACTED-DRIVER-DETECTION" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                     <!-- Project 9 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Intelligent Safety Helmet</h3>
+                            <p class="project-description">An IoT helmet with sensors for alcohol, impact, and helmet usage that sends auto-notifications with GPS coordinates in emergencies.</p>
+                            <a href="https://github.com/rutbala/LIFE-SAVING-INTELLIGENT-SAFETY-HELMET-WITH-AUTO-NOTIFICATIONS-" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 10 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">AWS Medical Data Batch Pipeline</h3>
+                            <p class="project-description">A scalable batch data pipeline on AWS using S3, AWS Batch, and SageMaker to streamline the ingestion, transformation, and analysis of medical datasets.</p>
+                            <a href="https://github.com/rutbala/AWS-Medical-Data-Batch-Pipeline-" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 11 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Healthcare Resource Allocation Dashboard</h3>
+                            <p class="project-description">A visual analytics dashboard built with Power BI to help hospital administrators optimize staffing, patient volumes, and resource utilization.</p>
+                            <a href="https://github.com/rutbala/Optimizing-Healthcare-Resource-Allocation-through-Visual-Analytics-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 12 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Person Count Detection System</h3>
+                            <p class="project-description">A hardware solution using Arduino Nano and IR sensors to manage crowd control and maintain social distancing in public places.</p>
+                            <a href="https://github.com/rutbala/Person-count-detection-to-keep-everyone-safe-during-pandemic-using-Embedded-systems" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 13 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Parkinson's Disease Prediction</h3>
+                            <p class="project-description">A machine learning model to predict Parkinson's disease using clinical data with SVM, Decision Trees, and Random Forest algorithms.</p>
+                            <a href="https://github.com/rutbala/PREDETICTION-FOR-PARKINSON-S-DISEASE" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 14 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Question and Answer Chatbot</h3>
+                            <p class="project-description">A web app that provides intelligent answers from uploaded PDFs using Google Gemini Pro, built with a Flask backend and a React frontend.</p>
+                            <a href="https://github.com/rutbala/Question-and-Answer-Chatbot" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 15 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">RGB Color Sensing Robot</h3>
+                            <p class="project-description">An autonomous robot using an Arduino Nano and a TCS3200 sensor to detect and process RGB color frequencies for navigation or sorting.</p>
+                            <a href="https://github.com/rutbala/RGB-COLOR-SENSING-ROBOT" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                     <!-- Project 16 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Sales Analysis & Report Design</h3>
+                            <p class="project-description">An analysis of sales for AtliQ Hardware using MySQL and Power BI to deliver a centralized dashboard for data-driven decision-making.</p>
+                            <a href="https://github.com/rutbala/Sales-Analysis-and-report-design-for-Atliq-Hardware" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 17 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Self-Learning Assistive Device</h3>
+                            <p class="project-description">An assistive device for individuals with Alzheimer's and visual impairments that uses facial/object recognition, OCR, and sign-to-speech.</p>
+                            <a href="https://github.com/rutbala/SELF-LEARNING-BASED-TRAINING-DEVICE-FOR-PEOPLE-WITH-ALZHEIMER-S-AND-VISUALLY-CHALLENGED" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                    <!-- Project 18 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Tracking the Storm</h3>
+                            <p class="project-description">A project to visualize trends in U.S. hurricanes by analyzing historical data on storm frequency, intensity, and climate impact.</p>
+                            <a href="https://github.com/rutbala/Tracking-the-Storm-Visualizing-Trends-in-U.S.-Hurricanes-and-Climate-Impact" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                     <!-- Project 19 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                             <h3 class="project-title">Veteran Housing Financial Product</h3>
+                            <p class="project-description">An analysis of U.S. veteran data using Power BI to uncover insights on demographics, employment, disabilities, and housing to support policy decisions.</p>
+                            <a href="https://github.com/rutbala/Empowering-Veterans-Through-Data-Insights" target="_blank" rel="noopener noreferrer" class="project-link gold-text">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 6: Resume Section -->
+        <section class="page" id="resume">
+            <div class="page-content">
+                <h2 class="section-title gold-text">My Resume</h2>
+                <div class="resume-container">
+                    <!-- Left side: Key Highlights -->
+                    <div class="resume-highlights">
+                        <h3 class="resume-subtitle">Key Strengths</h3>
+                        <ul>
+                            <li><i class="fas fa-robot"></i> AI & Machine Learning</li>
+                            <li><i class="fas fa-cloud"></i> Cloud Architecture & DevOps</li>
+                            <li><i class="fas fa-chart-pie"></i> Data Visualization & Storytelling</li>
+                            <li><i class="fas fa-cogs"></i> Software Development</li>
+                            <li><i class="fas fa-lightbulb"></i> Innovative Problem-Solving</li>
+                        </ul>
+                    </div>
+                    <!-- Right side: Download Zone -->
+                    <div class="resume-download-zone">
+                        <i class="fas fa-file-arrow-down download-icon"></i>
+                        <h3 class="resume-subtitle">Ready for the full story?</h3>
+                        <p>Download my complete resume to see the full details of my experience, projects, and skills.</p>
+                        <a href="https://drive.google.com/uc?export=download&id=1F80fVZ2Wt2lTdphOQeUv6ar9GOKppOPd" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 7: Certifications & Publications -->
+        <section class="page" id="certifications">
+            <div class="page-content">
+                <h2 class="section-title gold-text">Certifications & Publications</h2>
+                <div class="cert-pub-grid">
+                    <!-- Certifications Column -->
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-certificate"></i>
+                            <h3>Certifications</h3>
+                        </div>
+                        <ul class="info-list">
+                            <li>
+                                <i class="fab fa-aws"></i>
+                                <div class="info-text">
+                                    <h4>AWS Certified AI Practitioner</h4>
+                                    <p>Amazon Web Services | Issued: Feb 2025</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-award"></i>
+                                <div class="info-text">
+                                    <h4> Generative AI Fundamentals</h4>
+                                    <p>Databricks | Issued: Nov 2024</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-briefcase-medical"></i>
+                                <div class="info-text">
+                                    <h4>HIPAA Awareness for Business Associates</h4>
+                                    <p>HIPPATraining.com | Issued: Feb 2025</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-shield-alt"></i>
+                                <div class="info-text">
+                                    <h4>HIPAA Security</h4>
+                                    <p>HIPPATraining.com | Issued: Feb 2025</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-cogs"></i>
+                                <div class="info-text">
+                                    <h4>Machine Learning Fundamentals Micro-Credential</h4>
+                                    <p>Alteryx | Issued: Nov 2024</p>
+                                </div>
+                            </li>
+                             <li>
+                                <i class="fab fa-linkedin"></i>
+                                <div class="info-text">
+                                    <h4>Alteryx for Healthcare</h4>
+                                    <p>LinkedIn | Issued: Oct 2024</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Publications Column -->
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <i class="fas fa-book-open"></i>
+                            <h3>Publications</h3>
+                        </div>
+                        <ul class="info-list">
+                            <li>
+                                <i class="fas fa-file-alt"></i>
+                                <div class="info-text">
+                                    <h4>"Tracking the Storm: Visualizing Trends in U.S. Hurricanes & Climate Impact"</h4>
+                                    <p>Published in: IRJET 2025</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 8: Get in Touch Section -->
+        <section class="page" id="contact">
+            <div class="page-content">
+                <h2 class="section-title gold-text">Get in Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Let's Collaborate</h3>
+                        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to reach out using the form, or connect with me on LinkedIn.</p>
+                        <div class="social-links-contact">
+                            <a href="https://www.linkedin.com/in/ruth-balaji/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/manjdqba" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Navigation Arrows -->
+    <button class="nav-arrow prev-arrow" style="display: none;"><i class="fas fa-chevron-left"></i></button>
+    <button class="nav-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text gold-text">&copy; 2025 Ruth Balaji. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" class="footer-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
